@@ -4,7 +4,7 @@ import Meta from "@/components/meta";
 import { buttonVariants } from "@/components/ui/button";
 import { routes } from "@/config/routes";
 import { cn } from "@/lib/utils";
-import { getCurrentUserServer } from "@/server/api/validation/get-server-session";
+import { getServerAuthSession } from "@/server/auth";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
 
@@ -54,7 +54,8 @@ const Signin = () => {
 export default Signin;
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const user = await getCurrentUserServer(ctx);
+  const session = await getServerAuthSession(ctx);
+  const user = session?.user;
   if (user?.id)
     return {
       redirect: {

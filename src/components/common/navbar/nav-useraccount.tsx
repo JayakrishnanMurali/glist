@@ -7,6 +7,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { routes } from "@/config/routes";
 import { absoluteUrl } from "@/lib/helpers";
 import { User } from "next-auth";
 import { signOut } from "next-auth/react";
@@ -42,16 +43,16 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
             Profile
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem asChild disabled>
-          <Link href="/dashboard/billing">
-            <Icons.stories className="w-5 h-5 mr-2" />
-            Your Stories
+        <DropdownMenuItem asChild>
+          <Link href={routes.dashboard}>
+            <Icons.dashboard className="w-5 h-5 mr-2" />
+            Dashboard
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild disabled>
           <Link href="/dashboard/settings">
-            <Icons.bookmarks className="w-5 h-5 mr-2" />
-            Bookmarks
+            <Icons.widget className="w-5 h-5 mr-2" />
+            Widgets
           </Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator />

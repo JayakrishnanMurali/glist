@@ -33,6 +33,7 @@ const config = {
           1: "#94d1be",
           2: "#e0f2fe",
           3: "#0369a1",
+          notify: "#ea580c",
         },
       },
       animation: {
