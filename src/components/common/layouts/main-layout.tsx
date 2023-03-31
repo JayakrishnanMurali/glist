@@ -8,7 +8,7 @@ interface iLayout {
 
 export const MainLayout: React.FC<iLayout> = ({ children }) => {
   return (
-    <main>
+    <>
       <header className="container sticky top-0 z-40">
         <NavContainer>
           <NavLogo />
@@ -19,6 +19,6 @@ export const MainLayout: React.FC<iLayout> = ({ children }) => {
       <main className="container min-h-[80vh]">{children}</main>
 
       <SiteFooter />
-    </main>
+    </>
   );
 };
