@@ -1,7 +1,8 @@
 export const siteConfig = {
   name: "Glist",
+  title: "Experience the power of data-driven decision making",
   description:
-    "An open source personal dashboard webapplication.",
+    "Our personal dashboard web app offers you the ability to track your important data, visualize it in meaningful ways, and make data-driven decisions to achieve your goals. Join now to experience the power of data-driven decision making!",
   url: "http://localhost:3000",
   ogImage: "http://localhost:3000/og.jpg",
   links: {

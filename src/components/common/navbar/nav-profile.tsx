@@ -23,9 +23,18 @@ export const NavProfile = () => {
           <NavThemeToggle />
           <Link
             href={routes.signIn}
-            className={cn(buttonVariants({ size: "sm" }), "px-4")}
+            className={cn(
+              buttonVariants({ size: "sm", variant: "ghost" }),
+              "px-4"
+            )}
           >
             Sign in
+          </Link>
+          <Link
+            href={routes.signUp}
+            className={cn(buttonVariants({ size: "sm" }), "px-4")}
+          >
+            Register
           </Link>
         </>
       ) : (

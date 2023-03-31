@@ -3,15 +3,10 @@ import { buttonVariants } from "@/components/ui/button";
 import { routes } from "@/config/routes";
 import { useIsDarkTheme } from "@/hooks/use-isdarktheme";
 import { cn } from "@/lib/utils";
-import { userAuthSchema } from "@/lib/validations/auth";
 import { signIn } from "next-auth/react";
-import { useSearchParams } from "next/navigation";
 import * as React from "react";
-import * as z from "zod";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-type FormData = z.infer<typeof userAuthSchema>;
 
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [isGitHubLoading, setIsGitHubLoading] = React.useState<boolean>(false);
@@ -20,9 +15,8 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     React.useState<boolean>(false);
 
   const isDarkTheme = useIsDarkTheme();
-  const searchParams = useSearchParams();
 
-  const fromUrl = searchParams?.get("from") || routes.home;
+  const redirectAfterLogin = routes.dashboard;
 
   return (
     <div className={cn("grid gap-6", className)} {...props}>
@@ -34,7 +28,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         onClick={() => {
           setIsGoogleLoading(true);
           signIn("google", {
-            callbackUrl: fromUrl,
+            callbackUrl: redirectAfterLogin,
           });
         }}
         disabled={isGoogleLoading}
@@ -54,7 +48,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         onClick={() => {
           setIsGitHubLoading(true);
           signIn("github", {
-            callbackUrl: fromUrl,
+            callbackUrl: redirectAfterLogin,
           });
         }}
         disabled={isGitHubLoading}
@@ -74,7 +68,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         onClick={() => {
           setIsDiscordLoading(true);
           signIn("discord", {
-            callbackUrl: fromUrl,
+            callbackUrl: redirectAfterLogin,
           });
         }}
         disabled={isDiscorldLoading}

@@ -7,11 +7,12 @@ import { Analytics } from "@/components/analytics";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "next-themes";
-import { Roboto_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const robotoMono = Roboto_Mono({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-roboto-mono",
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 const MyApp: AppType<{ session: Session | null }> = ({
@@ -21,7 +22,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <main
-        className={`${robotoMono.variable} font-roboto-mono bg-theme-50 dark:bg-theme-900 text-theme-900 dark:text-theme-50 antialiased`}
+        className={`${poppins.variable} font-poppins bg-theme-50 dark:bg-theme-900 text-theme-900 dark:text-theme-50 antialiased`}
       >
         <SessionProvider session={session}>
           <Component {...pageProps} />

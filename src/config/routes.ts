@@ -1,11 +1,9 @@
 export const routes = {
   home: "/",
-  newPost: "/editor/",
-  editPost: "/edit/",
-  profile: "/profile/",
-  yourStories: "/stories/",
-  bookmarks: "/bookmarks",
-  signIn: "/signin/",
-  signUp: "/register/",
-  notFound: "/404/",
+  profile: "/profile",
+  signIn: "/signin",
+  signUp: "/register",
+  dashboard: "/dashboard",
+  notFound: "/404",
+  exploreWidgets: "/explore-widgets",
 };

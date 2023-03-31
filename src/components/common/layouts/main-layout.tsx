@@ -16,7 +16,7 @@ export const MainLayout: React.FC<iLayout> = ({ children }) => {
         </NavContainer>
       </header>
 
-      <main className="container min-h-screen">{children}</main>
+      <main className="container min-h-[80vh]">{children}</main>
 
       <SiteFooter />
     </main>

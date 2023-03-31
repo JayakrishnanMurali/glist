@@ -10,8 +10,8 @@ export const NavLogo: React.FC = () => {
       <div className="">
         <Link href={routes.home} className=" items-center space-x-2 md:flex">
           <Icons.logo />
-          <span className="hidden font-bold sm:inline-block">
-            {siteConfig.name}
+          <span className="hidden lowercase font-bold sm:inline-block">
+            {siteConfig.name}.
           </span>
         </Link>
       </div>

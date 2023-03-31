@@ -14,7 +14,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        "roboto-mono": ["var(--font-roboto-mono)", ...fontFamily.mono],
+        poppins: ["var(--font-poppins)", ...fontFamily.sans],
       },
       colors: {
         theme: {
@@ -42,6 +42,7 @@ const config = {
     },
   },
   plugins: [
+    //@ts-ignore
     require("tailwindcss-animate"),
     require("@tailwindcss/typography"),
   ],
