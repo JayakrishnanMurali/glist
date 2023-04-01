@@ -10,11 +10,11 @@ interface iLayout {
 
 export const DashboardLayout: React.FC<iLayout> = ({ children, user }) => {
   return (
-    <div className="container grid  md:grid-cols-[300px_1fr] ">
-      <aside className=" border-r border-theme-200 dark:border-theme-800 h-screen p-10">
+    <div className="container">
+      <aside className="fixed w-[300px] border-r border-theme-200 dark:border-theme-800 h-screen p-10">
         <DashboardSideNav user={user} />
       </aside>
-      <main className=" p-10">
+      <main className=" p-10 ml-[300px]">
         <DashboardTopNav />
         <div className="mt-14">{children}</div>
       </main>
