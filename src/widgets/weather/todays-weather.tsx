@@ -12,7 +12,7 @@ const todaysWeatherVariants = cva(
       variant: {
         default: "bg-theme-100 dark:bg-theme-800 hover:bg-theme-200 ",
         outline:
-          "bg-transparent border border-theme-200  dark:border-theme-700 ",
+          "bg-transparent border border-theme-200  hover:bg-theme-300  dark:border-theme-700 ",
         solid: "bg-theme-900 hover:bg-theme-700 dark:bg-theme-50 ",
       },
       size: {

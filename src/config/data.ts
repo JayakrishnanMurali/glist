@@ -40,10 +40,13 @@ export const _dashboardSection = [
 
 export type _dashboardSectionType = typeof _dashboardSection;
 
-export const weatherPatternColor = [
-  {
-    type: "sunny",
-    bg: "bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))] from-red-400 via-amber-300 to-cyan-600",
-    icon: Icons.sun,
-  },
-];
+export const _layout = {
+  "2xl": [
+    { i: "weather1", x: 0, y: 0, h: 1, w: 1 },
+    { i: "weather2", x: 2, y: 1, h: 1, w: 1 },
+    { i: "weather3", x: 0, y: 2, h: 1, w: 1 },
+    { i: "weather4", x: 1, y: 0, h: 1, w: 2 },
+    { i: "weather5", x: 0, y: 1, h: 1, w: 2 },
+    { i: "weather6", x: 1, y: 2, h: 1, w: 2 },
+  ],
+};
