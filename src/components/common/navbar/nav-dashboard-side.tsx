@@ -1,7 +1,7 @@
+import { AddNewSection } from "../dashboard/add-new-section";
 import { DashboardProfile } from "./nav-dashboard-profile";
 import { NavLogo } from "./nav-logo";
 import { NavSections } from "./nav-section-items";
-import { AddNewSection } from "@/components/dashboard/add-new-section";
 import { routes } from "@/config/routes";
 import { User } from "@prisma/client";
 

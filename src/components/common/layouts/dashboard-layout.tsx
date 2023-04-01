@@ -16,7 +16,7 @@ export const DashboardLayout: React.FC<iLayout> = ({ children, user }) => {
       </aside>
       <main className=" p-10">
         <DashboardTopNav />
-        {children}
+        <div className="mt-14">{children}</div>
       </main>
     </div>
   );

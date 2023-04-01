@@ -1,5 +1,6 @@
 import { DashboardLayout } from "@/components/common/layouts/dashboard-layout";
 import Meta from "@/components/meta";
+import { Widgets } from "@/components/widget/widget";
 import { routes } from "@/config/routes";
 import { siteConfig } from "@/config/site";
 import { getServerAuthSession } from "@/server/auth";
@@ -11,7 +12,7 @@ const Dashboard = ({ user }: { user: User }) => {
     <>
       <Meta title={`Dashboard | ${siteConfig.name}`} />
       <DashboardLayout user={user}>
-        <div></div>
+        <Widgets />
       </DashboardLayout>
     </>
   );

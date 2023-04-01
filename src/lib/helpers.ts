@@ -1,4 +1,5 @@
 import { env } from "@/env.mjs";
+import { format } from "date-fns";
 
 export const getUserInitials = (name: string | null) => {
   const userName = name;
@@ -11,7 +12,6 @@ export const getUserInitials = (name: string | null) => {
     .slice(0, 2);
   return initials;
 };
-
 
 export function nFormatter(num: number, digits?: number) {
   if (!num) return "0";
@@ -43,3 +43,16 @@ export function absoluteUrl(path: string) {
 export const strStrip = (str?: string): string =>
   str?.length ? str.toLowerCase().trim() : "";
 
+export function formatDate(input: string | number): string {
+  const date = new Date(input);
+  return date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+export function getWeekDay(input: string | number): string {
+  const date = new Date(input);
+  return format(date, "eeee");
+}

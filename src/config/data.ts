@@ -39,3 +39,11 @@ export const _dashboardSection = [
 ];
 
 export type _dashboardSectionType = typeof _dashboardSection;
+
+export const weatherPatternColor = [
+  {
+    type: "sunny",
+    bg: "bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))] from-red-400 via-amber-300 to-cyan-600",
+    icon: Icons.sun,
+  },
+];

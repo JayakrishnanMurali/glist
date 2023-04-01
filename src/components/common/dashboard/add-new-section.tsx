@@ -1,5 +1,5 @@
-import { Icons } from "../common/icons";
-import { Button } from "../ui/button";
+import { Icons } from "../icons";
+import { Button } from "@/components/ui/button";
 import React from "react";
 
 export const AddNewSection = () => {

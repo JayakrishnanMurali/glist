@@ -25,3 +25,7 @@ h4 {
 p {
   @apply scroll-m-20 text-base font-normal tracking-tight text-theme-700  transition-colors dark:text-theme-400;
 }
+
+.animate-scale-up {
+  @apply cursor-pointer transition-all duration-300 hover:scale-[1.02]  hover:drop-shadow-lg;
+}
